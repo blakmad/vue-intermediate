@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/vue-todo/public/index.html;C:/Workspace/vue-intermediate/vue-todo/src/components/TodoFooter.vue;C:/Workspace/vue-intermediate/vue-todo/src/components/TodoHeader.vue;C:/Workspace/vue-intermediate/vue-todo/src/components/TodoInput.vue;C:/Workspace/vue-intermediate/vue-todo/src/components/TotoList.vue;C:/Workspace/vue-intermediate/vue-todo/src/App.vue;C:/Workspace/vue-intermediate/vue-todo/src/main.js;C:/Workspace/vue-intermediate/vue-todo/babel.config.js;C:/Workspace/vue-intermediate/vue-todo/jsconfig.json;C:/Workspace/vue-intermediate/vue-todo/package-lock.json;C:/Workspace/vue-intermediate/vue-todo/package.json;C:/Workspace/vue-intermediate/vue-todo/README.md;C:/Workspace/vue-intermediate/vue-todo/vue.config.js;C:/Workspace/vue-intermediate/README.md" />
+  </component>
+</project>
