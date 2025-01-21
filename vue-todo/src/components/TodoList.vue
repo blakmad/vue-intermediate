@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul>
-      <li v-for="(todoItem, index) in todoItems" v-bind:key="todoItem" class="shadow">
+      <li v-for="(todoItem, index) in propsdata" v-bind:key="todoItem" class="shadow">
         <i class="checkBtn fas fa-check" :class="{checkBtnCompleted: todoItem.completed}"
            v-on:click="toggleComplete(todoItem, index)"></i>
         <span v-bind:class="{textCompleted: todoItem.completed}">{{ todoItem.item }}</span>
@@ -15,36 +15,13 @@
 
 <script>
 export default {
-
-  data: function () {
-    return {
-      todoItems: []
-    }
-  },
-
-  created: function () {// 컴포넌트가 생성되면 실행되는 함수
-    if (localStorage.length > 0) {
-      for (var i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i) !== 'loglevel:webpack-dev-server') {
-          console.log(JSON.parse(localStorage.getItem(localStorage.key(i))));
-          this.todoItems.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
-
-          // this.todoItems.push(localStorage.key(i));
-        }
-      }
-    }
-  },
+  props:['propsdata'],
   methods: {
     removeTodo: function (todoItem, index) {
-      console.log(todoItem, index);
-      localStorage.removeItem(todoItem);
-      this.todoItems.splice(index, 1);  //  splice(index, 1) 배열의 요소를 삭제한다.
+      this.$emit('removeItem', todoItem, index);
     },
     toggleComplete: function (todoItem, index) {
-      console.log(todoItem, index);
-      todoItem.completed = !todoItem.completed;
-      localStorage.removeItem(todoItem.item);
-      localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
+      this.$emit('toggleItem', todoItem, index);
     }
   }
 
